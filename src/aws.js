@@ -61,6 +61,7 @@ async function terminateEc2Instance() {
 
   const params = {
     InstanceIds: [config.input.ec2InstanceId],
+    delay: 15, 
   };
 
   try {
