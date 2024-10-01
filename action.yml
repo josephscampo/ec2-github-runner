@@ -65,6 +65,18 @@ inputs:
     description: >-
       Directory that contains actions-runner software and scripts. E.g. /home/runner/actions-runner.
     required: false
+  pre-runner-script:
+    description: >-
+      Specifies bash commands to run before the runner starts. It's useful for installing dependencies with apt-get, yum, dnf, etc.
+    required: false
+  run-runner-as-service:
+    type: boolean
+    description: >-
+      Start the runner as a service rather than using ./run.sh as root.
+    required: false
+  run-runner-as-user:
+    description: >-
+      Specify user under whom the runner service should run
 outputs:
   label:
     description: >-
